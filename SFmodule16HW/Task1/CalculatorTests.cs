@@ -37,7 +37,7 @@ namespace CalculatorTests
             Assert.Catch<DivideByZeroException>(()=>calculator.Division(100,0));
         }
         [Test]
-        public void MiltiplicationOverflowException()
+        public void MiltiplicationOverflowExceptionException()
         {
             Calculator calculator = new Calculator();
             Assert.Catch<OverflowException>(() => calculator.Miltiplication(2147483647, 2147483647));
