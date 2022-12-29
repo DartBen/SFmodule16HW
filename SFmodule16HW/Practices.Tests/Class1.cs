@@ -1,16 +1,15 @@
-﻿using Practices;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
-namespace CalculatorTests
+namespace Practices.Tests
 {
     [TestFixture]
-    internal class CalculatorTests
+    internal class Class1
     {
         [Test]
         public void AdditionalCorrectResult()
         {
             Calculator calculator = new Calculator();
-            Assert.True(calculator.Additional(100, 50)== 150);
+            Assert.True(calculator.Additional(100, 50) == 150);
         }
         [Test]
         public void SubtractionCorrectResult()
@@ -34,19 +33,8 @@ namespace CalculatorTests
         public void DivisionDivideByZeroException()
         {
             Calculator calculator = new Calculator();
-            Assert.Catch<DivideByZeroException>(()=>calculator.Division(100,0));
-        }
-        [Test]
-        public void MiltiplicationOverflowExceptionException()
-        {
-            Calculator calculator = new Calculator();
-            Assert.Catch<OverflowException>(() => calculator.Miltiplication(2147483647, 2147483647));
-        }
-        [Test]
-        public void AdditionalOverflowException()
-        {
-            Calculator calculator = new Calculator();
-            Assert.Catch<OverflowException>(() => calculator.Additional(2147483647, 2147483647));
+            Assert.Catch<DivideByZeroException>(() => calculator.Division(100, 0));
         }
     }
 }
+
